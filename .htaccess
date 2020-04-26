@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+RewriteEngine On
+IndexIgnore */*
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/admin
+    RewriteRule ^admin/css/(.*)$ /public/admin/css/$1 [L]
+    RewriteRule ^admin/img/(.*)$ /public/admin/img/$1 [L]
+    RewriteRule ^admin/js/(.*)$ /public/admin/js/$1 [L]
+    RewriteRule ^ad /public/index.php [L]
+
+RewriteCond %{REQUEST_URI} !^/public
+    RewriteRule ^uploads/(.*)$ /public/uploads/$1 [L]
+    RewriteRule ^assets/(.*)$ /public/assets/$1 [L]
+    RewriteRule ^frontend/(.*)$ /public/frontend/$1 [L]
+    RewriteRule (.*) /public/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) /public/index.php [L]

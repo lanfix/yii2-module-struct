@@ -1,0 +1,26 @@
+{
+    "name": "lanfix/yii2-module-struct",
+    "description": "Yii2 Module Struct",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "yiisoft/yii2": "~2.0.24",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "~2.0.7"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.14"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

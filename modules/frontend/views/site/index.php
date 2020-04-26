@@ -1,0 +1,1 @@
+[module:Frontend][controller:Site][action:Index]
